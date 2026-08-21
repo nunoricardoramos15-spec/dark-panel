@@ -1,0 +1,151 @@
+.admins-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  padding: 40px 0;
+}
+
+.admins-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.admins-header h1 {
+  font-size: 32px;
+  color: #ff1744;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px rgba(255, 23, 68, 0.5);
+}
+
+.admins-header p {
+  color: #888;
+  font-size: 16px;
+}
+
+.admins-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.admin-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff1744, #ff5252);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.admin-card:hover {
+  border-color: #ff1744;
+  box-shadow: 0 8px 20px rgba(255, 23, 68, 0.3);
+  transform: translateY(-10px);
+}
+
+.admin-card:hover::before {
+  opacity: 1;
+}
+
+.admin-avatar {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ff1744, #ff5252);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 auto 15px;
+  box-shadow: 0 4px 15px rgba(255, 23, 68, 0.4);
+}
+
+.admin-card h3 {
+  color: #e0e0e0;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.admin-email {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.admin-bio {
+  color: #c0c0c0;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  min-height: 40px;
+}
+
+.admin-links {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid;
+}
+
+.social-link.discord {
+  background-color: rgba(88, 101, 242, 0.2);
+  color: #5865f2;
+  border-color: #5865f2;
+}
+
+.social-link.discord:hover {
+  background-color: #5865f2;
+  color: white;
+  transform: scale(1.05);
+}
+
+.social-link.telegram {
+  background-color: rgba(0, 136, 204, 0.2);
+  color: #0088cc;
+  border-color: #0088cc;
+}
+
+.social-link.telegram:hover {
+  background-color: #0088cc;
+  color: white;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .admins-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+  }
+
+  .admins-header h1 {
+    font-size: 24px;
+  }
+}

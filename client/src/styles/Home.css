@@ -1,0 +1,166 @@
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  padding: 40px 0;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeIn 0.6s ease-in;
+}
+
+.home-header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.home-header h1 span {
+  color: #ff1744;
+  text-shadow: 0 0 20px rgba(255, 23, 68, 0.5);
+}
+
+.home-header p {
+  color: #888;
+  font-size: 16px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.create-post {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-left: 3px solid #ff1744;
+  margin-bottom: 40px;
+}
+
+.create-post h2 {
+  color: #ff1744;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.create-post textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.posts-feed h2 {
+  color: #ff1744;
+  margin-bottom: 25px;
+  font-size: 24px;
+  border-bottom: 2px solid #ff1744;
+  padding-bottom: 10px;
+}
+
+.post-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.post-card:hover {
+  border-color: #ff1744;
+  box-shadow: 0 4px 12px rgba(255, 23, 68, 0.2);
+}
+
+.post-header {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #ff1744;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.author-name {
+  font-weight: 600;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.post-date {
+  color: #666;
+  font-size: 12px;
+  margin: 0;
+}
+
+.post-content h3 {
+  color: #ff1744;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.post-content p {
+  color: #c0c0c0;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.post-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.post-images img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.post-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 10px;
+  background-color: rgba(255, 23, 68, 0.1);
+  color: #ff1744;
+  border: 1px solid #ff1744;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.action-btn:hover {
+  background-color: rgba(255, 23, 68, 0.2);
+  transform: translateY(-2px);
+}

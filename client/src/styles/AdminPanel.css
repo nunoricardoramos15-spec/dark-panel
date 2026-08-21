@@ -1,0 +1,176 @@
+.admin-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  padding: 40px 0;
+}
+
+.admin-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.admin-header h1 {
+  font-size: 32px;
+  color: #ff1744;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px rgba(255, 23, 68, 0.5);
+}
+
+.admin-header p {
+  color: #888;
+  font-size: 16px;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #333;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 15px 25px;
+  background-color: transparent;
+  color: #888;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+  color: #ff1744;
+}
+
+.tab-btn.active {
+  color: #ff1744;
+  border-bottom-color: #ff1744;
+}
+
+.admin-content {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.servers-list h2 {
+  color: #ff1744;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.server-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-left: 4px solid #ff1744;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.server-card:hover {
+  border-color: #ff1744;
+  box-shadow: 0 4px 12px rgba(255, 23, 68, 0.2);
+  transform: translateX(5px);
+}
+
+.server-info {
+  flex: 1;
+}
+
+.server-info h3 {
+  color: #ff1744;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.server-info p {
+  color: #c0c0c0;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.server-links {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.link-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link-badge.discord {
+  background-color: #5865f2;
+  color: white;
+}
+
+.link-badge.discord:hover {
+  background-color: #4752c4;
+  transform: scale(1.05);
+}
+
+.link-badge.telegram {
+  background-color: #0088cc;
+  color: white;
+}
+
+.link-badge.telegram:hover {
+  background-color: #0066aa;
+  transform: scale(1.05);
+}
+
+.submitted-by {
+  color: #666;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.server-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.server-actions .btn {
+  padding: 10px 15px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .server-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .server-actions {
+    width: 100%;
+  }
+
+  .server-actions .btn {
+    flex: 1;
+  }
+
+  .admin-tabs {
+    gap: 5px;
+  }
+
+  .tab-btn {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+}
